@@ -1,0 +1,18 @@
+ATIVIDADE 01
+
+ - Crie uma pasta chamada ATVDS01;
+ - Dentro dessa pasta crie 2 classes JAVA, Main.java e Produto.java;
+ - Na classe Produto:
+ 	- Definir 5 atributos para representar um Produto;
+	
+ 	- Defina no mínimo 3 métodos construtores;
+ 	- Faça o Encapsulamento de todos atributos da classe;
+ 	- Desenvolva métodos de funcionalidade que achar necessário.
+
+* Na classe Main apresente um menu com as opções:
+	- Criar um produto;
+	- Alerar dados de um produto
+	- Excluir um produto;
+	- Listar todos os produtos;
+	- Sair.
+ !! O programa somente encerará ao escolher a opção "Sair".
