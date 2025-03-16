@@ -16,3 +16,21 @@ ATIVIDADE 01
 	- Listar todos os produtos;
 	- Sair.
  !! O programa somente encerará ao escolher a opção "Sair".
+
+Activity 01
+
+ - Create a folder named ATVDS01;
+ - Inside this folder create 2 class Java, Main.java & Produto.java;
+ - In the Product class:
+	- Define at leats 3 constructors methods;
+	- Do the Encapsulation for all the attributes of the class;
+	- Develop methods of funcionility if necessary;
+
+* In the Main class, show the menu with the options:
+	- Create a product;
+	- Change data of one product;
+	- Remove one product;
+	- List all the products;
+	- Exit;
+
+The program will only leave if the user select the option "Exit";

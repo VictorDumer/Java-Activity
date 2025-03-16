@@ -4,18 +4,26 @@ public class Produto {
     private boolean avenda;
     private boolean nova;
     private String imovel;
-    private int info;
     
-    public Produto(int info,String imovel,String endereco, String preco, boolean avenda, boolean nova){
+    public Produto(String imovel,String endereco, String preco, boolean avenda, boolean nova){
         this.imovel = imovel;
         this.endereco = endereco;
         this.preco = preco;
         this.avenda = avenda;
         this.nova = nova;
     }
-    public static String index(int info,String endereco, String imovel, boolean avenda, boolean nova, String preco) {
-        return "\n"+ "Index: "+ info+"\nEndereco: " + endereco + "\nTipo de imóvel: " + imovel + "\nÀ venda: " + avenda + "\nNovo: " + nova + "\nPreço: " + preco +"\n";
+    public Produto(){
+        this.imovel = null;
+        this.endereco = endereco;
+        this.preco = preco;
+        this.avenda = avenda;
+        this.nova = nova;
     }
+    
+    public static String index(String endereco, String imovel, boolean avenda, boolean nova, String preco) {
+        return "\n"+"\nEndereco: " + endereco + "\nTipo de imóvel: " + imovel + "\nÀ venda: " + avenda + "\nNovo: " + nova + "\nPreço: " + preco +"\n";
+    }
+    //getters
     public String getEndereco(){
         return endereco;
     }
@@ -31,7 +39,8 @@ public class Produto {
     public String getImovel(){
         return imovel;
     }
-    public void setNome(String endereco) {
+    // setters
+    public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
     public void setPreco(String preco){
