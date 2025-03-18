@@ -76,9 +76,9 @@ public class Main {
                             System.out.println("\n[\n Index: " + i + "\n" + produtos.get(i) + "\n ]\n");
 
                         }
-                        System.out.println("Qual objeto você quer alterar?");
+                        System.out.println("Qual objeto você quer alterar? (Utilize o index)");
                         info = Entrada.nextInt();
-                        if (info < produtos.size() || info > produtos.size()) {
+                        if (info < 0 || info > produtos.size()) {
                             System.out.println(
                                     "Err! Parece que você está tentando colocar um index inexistente");
                             System.out.println("Pressione Enter para continuar...");
@@ -139,7 +139,7 @@ public class Main {
                             System.out.println("\n[\n Index: " + i + "\n" + produtos.get(i) + "\n ]\n");
                         }
 
-                        System.out.println("Qual produto você deseja excluir? (utilize o index para exclui-lo)");
+                        System.out.println("Qual produto você deseja excluir? (utilize o index)");
                         info = Entrada.nextInt();
 
                         if (info >= produtos.size() || info < 0) {
