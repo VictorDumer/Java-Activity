@@ -13,7 +13,7 @@ public class Produto {
         this.nova = nova;
     }
     public Produto(){
-        this.imovel = null;
+        this.imovel = imovel;
         this.endereco = endereco;
         this.preco = preco;
         this.avenda = avenda;

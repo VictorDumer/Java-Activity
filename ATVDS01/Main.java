@@ -67,7 +67,7 @@ public class Main {
                         }
                         System.out.println("Qual objeto você quer alterar?");
                         info = Entrada.nextInt();
-                        if (info<0|| info<=produtos.size()) {
+                        if (info<produtos.size() || info>produtos.size() ) {
                             System.out.println(
                                 "Err! Parece que você está tentando colocar um index inexistente");
                             break;
