@@ -19,14 +19,14 @@ como eu montaria a lista, apropósito pensei em utilizar vetores todavia achei q
 grande o suficiente para ser "infinita". Ai que me foi mostrado a biblioteca ArrayList, a princípio está biblioteca faz com que o array seja indefinido, algo diferente para mim que sempre tive que colocar um limite em um array. Após conversar com o professor e ver alguns vídeos ensinando sobre o mesmo no youtube / fóruns, entendi relativamento como o mesmo funciona, precisando ser definido com 
   
   ```
-  ArrayList<tipo_da_variavel> produtos = new ArrayList<>();
+      ArrayList<tipo_da_variavel> produtos = new ArrayList<>();
   ```
 <p> 
     (no meu caso), e para acessa-lo seria necessário criar um novo produto, e nesse novo produto digitar 
 </p>
   
   ```
-    produtos.add( novoProduto.setAlgo() );
+      produtos.add( novoProduto.setAlgo() );
   ```
    Só que no meu caso eu fiz com que esse aray fosse uma string, e nesse produtos.add, vincula-se um método onde os valores eram armazenados em uma string. Sei que isso tem alguns erros, todavia, como primeiro projeto acho que me sai bem. E acho que foi isso, pois, depois da dificuldade de entender como funcionava a biblioteca Array List, o resto ficou fácil pois é apenas o mesmo de outra linguagem como js. <strong>Abaixo deixarei mais detalhado o que cada coisa faz</strong>, todavia, este é o processo.
 </p>
@@ -75,9 +75,10 @@ grande o suficiente para ser "infinita". Ai que me foi mostrado a biblioteca Arr
    public Produto(boolean avenda, boolean nova){
         this.avenda = avenda;
         this.nova = nova;
+    }
 ```
 ```
-public Produto() {
+    public Produto() {
 
     }
 ```
@@ -87,7 +88,7 @@ public Produto() {
 <p> Acabei utilizando um método funcional para exibir os valores, queria faze-lo aparecer dessa forma, todavia, por ser uma das primeiras aulas utilizando a biblioteca ArrayList, acabei não entendendo 100% como utiliza-la de forma eficiente.</p>
 
 ```
-public static String index(String endereco, String imovel, boolean avenda, boolean nova, String preco) {
+    public static String index(String endereco, String imovel, boolean avenda, boolean nova, String preco) {
         return "\n"+"\nEndereco: " + endereco + "\nTipo de imóvel: " + imovel + "\nÀ venda: " + avenda + "\nNovo: " + nova + "\nPreço: " + preco +"\n";
     }
     
@@ -96,7 +97,7 @@ public static String index(String endereco, String imovel, boolean avenda, boole
 <p> Fiz o Encapsulamento dos 5 atributos:</p>
 
 ```
-private String endereco;
+    private String endereco;
     private String preco;
     private boolean avenda;
     private boolean nova;
@@ -125,9 +126,9 @@ e no final, o mesmo cadastra este digamos ficha, e atrubui ele ao produtos.Produ
 </p>
 
 ```
-for (int i = 0; i < produtos.size(); i++) {
+    for (int i = 0; i < produtos.size(); i++) {
         System.out.println("\n[\n Index: " + i + "\n" + produtos.get(i) + "\n ]\n");
-}
+    }
 ```
 
 # Considerações: 🎭
