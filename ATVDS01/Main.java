@@ -8,7 +8,6 @@ public class Main {
         Scanner Entrada = new Scanner(System.in);
         Produto produto = new Produto();
         int op;
-        int req = 0;
         int info = 0;
         boolean avenda = false;
         boolean nova = false;
@@ -55,15 +54,23 @@ public class Main {
                     System.out.println("Informe qual é o seu imóvel (ex: Casa, Apartamento etc..)");
                     String imovel = Entrada.nextLine().trim();
 
-                    Produto novoProduto = new Produto(imovel, endereco, preco, avenda, nova);
+                    Produto novoProduto;
+                    if (preco != null) {
+                        novoProduto = new Produto(imovel, endereco, preco, avenda, nova);
+                    } else if (endereco.isEmpty() && imovel.isEmpty()) {
+                        novoProduto = new Produto(avenda, nova);
+                    } else {
+                        novoProduto = new Produto(imovel, endereco, "Não informado");
+                    }
+                    
                     produtos.add(Produto.index(novoProduto.getEndereco(), novoProduto.getImovel(), novoProduto.isAvenda(),
                             novoProduto.isNova(), novoProduto.getPreco())
                     );
 
-                    req++;
+                    
                     break;
                 case 2:
-                    if (req == 0) {
+                    if (produtos.isEmpty()) {
                         System.out.println(
                                 "Err! Parece que você está tentando alterar sem ao menos ter criado um objeto!");
                         System.out.println("Pressione Enter para continuar...");
@@ -124,7 +131,7 @@ public class Main {
 
                     break;
                 case 3:
-                    if (req == 0 && produtos.size() <= 0) {
+                    if (produtos.isEmpty()) {
                         System.out.println(
                                 "Err! Parece que você está tentando excluir sem ao menos ter criado um objeto!");
                         System.out.println("Pressione Enter para continuar...");
@@ -163,7 +170,7 @@ public class Main {
                     break;
 
                 case 4:
-                    if (req == 0) {
+                    if (produtos.isEmpty()) {
                         System.out.println(
                                 "Err! Parece que você está tentando listar sem ao menos ter criado um objeto!");
                         System.out.println("Pressione Enter para continuar...");

@@ -12,14 +12,20 @@ public class Produto {
         this.avenda = avenda;
         this.nova = nova;
     }
-    public Produto(){
+    public Produto(String imovel,String endereco, String preco){
         this.imovel = imovel;
         this.endereco = endereco;
         this.preco = preco;
+    }
+    public Produto(boolean avenda, boolean nova){
         this.avenda = avenda;
         this.nova = nova;
     }
     
+    public Produto() {
+
+    }
+   
     public static String index(String endereco, String imovel, boolean avenda, boolean nova, String preco) {
         return "\n"+"\nEndereco: " + endereco + "\nTipo de imóvel: " + imovel + "\nÀ venda: " + avenda + "\nNovo: " + nova + "\nPreço: " + preco +"\n";
     }
