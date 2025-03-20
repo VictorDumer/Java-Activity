@@ -135,3 +135,11 @@ e no final, o mesmo cadastra este digamos ficha, e atrubui ele ao produtos.Produ
 <p>
 Achei muito interessante, gosto de atividades práticas, o teórico é necessário é claro, todavia não há nada melhor que praticar !!
 </p>
+
+# Como clonar o repositório:
+
+<p> Digite em seu terminal o comando:</p>
+
+```
+git clone https://github.com/VictorDumer/Java-Activity.git
+```
